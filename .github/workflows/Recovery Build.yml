@@ -121,8 +121,8 @@ jobs:
       working-directory: workspace
       continue-on-error: true
 
-    - name: Setup Debug Session
-      uses: csexton/debugger-action@master
+#    - name: Setup Debug Session
+#      uses: csexton/debugger-action@master
       
     - name: Clone device tree
       run: |
