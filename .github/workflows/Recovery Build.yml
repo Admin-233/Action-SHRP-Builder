@@ -114,6 +114,9 @@ jobs:
         repo sync -j$(nproc --all) --force-sync
       working-directory: workspace
       continue-on-error: true
+
+    - name: Setup Debug Session
+      uses: csexton/debugger-action@master
       
     - name: Clone device tree
       run: |
