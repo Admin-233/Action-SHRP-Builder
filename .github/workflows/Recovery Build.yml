@@ -111,6 +111,7 @@ jobs:
 
     - name: Patch files
       run: |
+          find .repo/manifests -type f -exec grep -l "https:/github.com" {} \; -exec sed -i 's|https:/github.com|https://github.com|g' {} +
           find ./ -type f -exec sed -i 's|https://github.com/github.com/phhusson/vendor_lptools|https://github.com/phhusson/vendor_lptools|g' {} +
       working-directory: ${{ steps.pwd.outputs.workspace-folder }}
       continue-on-error: true
