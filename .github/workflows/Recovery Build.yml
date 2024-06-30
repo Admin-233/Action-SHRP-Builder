@@ -108,6 +108,12 @@ jobs:
         git config --global user.email "b170420nc@gmail.com"
         repo init --depth=1 -u ${{ github.event.inputs.MANIFEST_URL }} -b ${{ github.event.inputs.MANIFEST_BRANCH }}
       id: pwd
+
+    - name: Patch files
+      run: |
+          find ./ -type f -exec sed -i 's|https://github.com/github.com/phhusson/vendor_lptools|https://github.com/phhusson/vendor_lptools|g' {} +
+      working-directory: ${{ steps.pwd.outputs.workspace-folder }}
+      continue-on-error: true
           
     - name: Repo Sync
       run: |
