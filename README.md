@@ -1,5 +1,3 @@
-## forked from azwhikaru/Action-TWRP-Builder, removed fork relation for some reason
-
 ## Automated TWRP compilation based on Github Action
 
 ## Advertising
