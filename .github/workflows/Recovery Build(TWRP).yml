@@ -148,8 +148,8 @@ jobs:
         swap-size-gb: 12
 
 
-    - name: Setup Debug Session
-      uses: csexton/debugger-action@master
+#    - name: Setup Debug Session
+#      uses: csexton/debugger-action@master
 
     - name: Building recovery
       run: |
